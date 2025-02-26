@@ -5,9 +5,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/gin-gonic/gin"
 	"github.com/ryanvillarreal/metrics/core/db"
 	"github.com/ryanvillarreal/metrics/core/file"
+	webserver "github.com/ryanvillarreal/metrics/core/web"
 
 	"github.com/spf13/cobra"
 )
@@ -21,7 +21,7 @@ var (
 
 var rootCmd = &cobra.Command{
 	Use:     "metrics",
-	Short:   "get stats for nerds",
+	Short:   "get nmap stats for nerds",
 	Version: "0.0.1",
 	Args:    cobra.MaximumNArgs(3),
 	Run: func(cmd *cobra.Command, args []string) {
@@ -63,4 +63,5 @@ func startDB() {
 }
 
 func startWeb() {
+	webserver.Start()
 }

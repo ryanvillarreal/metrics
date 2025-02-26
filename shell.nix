@@ -9,6 +9,6 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    echo "Go $(go version) | sqlc $(sqlc --version)"
+    echo "Go $(go version) | sqlc $(sqlc version)"
   '';
 }

@@ -2,6 +2,6 @@
 SELECT * FROM scans
 WHERE id = ? LIMIT 1;
 
--- name: Count :one
+-- name: CountScans :one
 SELECT COUNT(*) FROM scans;
 
